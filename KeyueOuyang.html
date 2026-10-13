@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Keyue Ouyang: computer science student at the University of Washington working on robotics software and data engineering.">
+<meta property="og:title" content="Keyue Ouyang">
+<meta property="og:description" content="Computer science student at the University of Washington working on robotics software and data engineering.">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>Keyue Ouyang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Schibsted+Grotesk:wght@600;800&display=swap">
+<style>
+/* Layout: one reading column; on wide screens each section hangs off a narrow mono label rail named like a ROS 2 topic (/experience, /skills). Phone-first, since visitors arrive from a QR scan. */
+:root {
+  --bg: #F3F5F8;
+  --surface: #FFFFFF;
+  --fg: #151A24;
+  --muted: #586172;
+  --line: #DCE1E9;
+  --accent: #B53E13;
+  --accent-soft: #FBEAE2;
+  --display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #10141B;
+    --surface: #171C25;
+    --fg: #E7EAF0;
+    --muted: #9AA4B5;
+    --line: #283040;
+    --accent: #FF8152;
+    --accent-soft: #2B1D17;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #10141B;
+  --surface: #171C25;
+  --fg: #E7EAF0;
+  --muted: #9AA4B5;
+  --line: #283040;
+  --accent: #FF8152;
+  --accent-soft: #2B1D17;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 3.5rem 4rem;
+}
+
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+/* Hero */
+.hero { display: grid; gap: 1.25rem; padding-block-end: 2.75rem; }
+.eyebrow {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.eyebrow b { color: var(--accent); font-weight: 500; }
+h1 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 10vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.lede {
+  margin: 0;
+  max-width: 40rem;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--fg);
+  text-wrap: pretty;
+}
+.facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  font-variant-numeric: tabular-nums;
+}
+.facts li { display: grid; gap: 0.1rem; }
+.facts .k {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.facts .v { font-family: var(--display); font-weight: 600; font-size: 1.35rem; line-height: 1.2; }
+
+.contact { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: stretch; }
+.email {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 6px;
+  padding: 0.25rem 0.25rem 0.25rem 0.85rem;
+  min-width: 0;
+}
+.email span {
+  font-family: var(--mono);
+  font-size: 0.92rem;
+  user-select: all;
+  overflow-wrap: anywhere;
+}
+button, .btn {
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid transparent;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  line-height: 1.2;
+}
+#copy-email { background: var(--accent-soft); color: var(--accent); }
+#copy-email:hover { border-color: var(--accent); }
+.btn { background: var(--fg); color: var(--bg); }
+.btn:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
+
+/* Sections */
+.sec {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 2rem;
+  padding-block: 2.25rem;
+  border-top: 1px solid var(--line);
+}
+.sec > h2 {
+  margin: 0;
+  padding-top: 0.2rem;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+.sec > h2 .sl { color: var(--muted); }
+.stack { display: grid; gap: 2.25rem; min-width: 0; }
+
+.entry { display: grid; gap: 0.6rem; min-width: 0; }
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.15rem 1rem;
+}
+.entry h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+.entry .org { color: var(--muted); font-weight: 400; }
+.when {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.specs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.specs li {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  line-height: 1.4;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--fg);
+  background: var(--surface);
+}
+.points { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.4rem; max-width: 40rem; }
+.points li { padding-left: 0.2rem; }
+.points li::marker { color: var(--accent); }
+
+.edu-meta { margin: 0; color: var(--muted); }
+.course-label {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.skills { margin: 0; display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: 0.9rem 1.25rem; }
+.skills dt {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 0.25rem;
+}
+.skills dd { margin: 0; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .wrap { padding-block: 2.25rem 3rem; }
+  .sec { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding-block: 1.75rem; }
+  .skills { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
+  .skills dd { margin-bottom: 0.8rem; }
+  .lede { font-size: 1.05rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow"><b>Robotics software</b> · Data engineering · Seattle, WA</p>
+    <h1>Keyue Ouyang</h1>
+    <p class="lede">Computer science student at the University of Washington. I build robot software with ROS&nbsp;2 and Isaac&nbsp;Sim, and data pipelines with Python and PostgreSQL. I learn fast, stay curious, and work hard.</p>
+    <ul class="facts">
+      <li><span class="k">School</span><span class="v">UW Seattle</span></li>
+      <li><span class="k">Graduating</span><span class="v">June 2029</span></li>
+      <li><span class="k">GPA</span><span class="v">3.95</span></li>
+      <li><span class="k">Dean's List</span><span class="v">3 quarters</span></li>
+    </ul>
+    <div class="contact">
+      <div class="email">
+        <span id="email">keyueoy@uw.edu</span>
+        <button type="button" id="copy-email">Copy email</button>
+      </div>
+      <a class="btn" href="https://www.linkedin.com/in/ken-ouyang" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <section class="sec" aria-labelledby="h-exp">
+    <h2 id="h-exp"><span class="sl" aria-hidden="true">/</span>experience</h2>
+    <div class="stack">
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Research Assistant <span class="org">· MACS Lab</span></h3>
+          <p class="when">Jan 2026 – Present</p>
+        </div>
+        <ul class="specs"><li>Isaac Sim</li><li>Python</li><li>VLA models</li></ul>
+        <ul class="points">
+          <li>Explore advanced robotics concepts and machine-learning design applications.</li>
+          <li>Taught myself Python and Isaac Sim to design and run robotic simulations, connecting machine-learning theory with applied industry design.</li>
+          <li>Collect and clean data, and research vision-language-action (VLA) models.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Software Engineering Intern <span class="org">· Autolife Robotic</span></h3>
+          <p class="when">Jul – Sep 2026</p>
+        </div>
+        <ul class="specs"><li>ROS 2 Jazzy</li><li>Python 3.12</li><li>48 → 16 kHz audio</li><li>62 tests</li></ul>
+        <ul class="points">
+          <li>Contributed to a bilingual, multimodal wake-word pipeline in Python 3.12 and ROS 2 Jazzy, pairing a 3M-parameter Sherpa-ONNX Zipformer keyword spotter with MediaPipe Face Mesh mouth-motion confirmation.</li>
+          <li>Adapted 48 kHz stereo PCM16 shared-memory audio to a 16 kHz mono keyword-spotting path, and built a thread-safe 2-second pre-roll buffer with ordered replay of transition audio.</li>
+          <li>Implemented UUID-based event idempotency and a bounded handoff state machine with an 8-second cap, 100 ms batches, 800 ms server-VAD finalization, and a 5-minute semantic-inactivity timeout.</li>
+          <li>Validated concurrency, timing, failure recovery, and event contracts with 62 focused unit and integration tests, and debugged end to end on embedded Linux hardware.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Summer Intern <span class="org">· PropLogix</span></h3>
+          <p class="when">Jul – Sep 2026</p>
+        </div>
+        <ul class="specs"><li>PostgreSQL</li><li>Data ingestion</li><li>Texas property data</li></ul>
+        <ul class="points">
+          <li>Automated the download, export, and import of Texas housing-property data in PostgreSQL.</li>
+          <li>Designed algorithms to fill in missing data fields and make data ingestion more efficient.</li>
+          <li>Managed property data for more than three of the largest counties in Texas.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-lead">
+    <h2 id="h-lead"><span class="sl" aria-hidden="true">/</span>leadership</h2>
+    <div class="stack">
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Lead Mathematical Modeler &amp; Algorithm Developer <span class="org">· DubsTech Datathon</span></h3>
+          <p class="when">Feb 2026</p>
+        </div>
+        <ul class="specs"><li>24-hour build</li><li>4-person team</li><li>4.5 / 5 model score</li></ul>
+        <ul class="points">
+          <li>Worked through unfamiliar urban-traffic datasets and built original mathematical models in a 24-hour hackathon, scoring 4.5/5 for model execution.</li>
+          <li>Led a four-person team, delegating tasks and coordinating delivery against the 24-hour deadline.</li>
+          <li>Built the final presentation with data visualization, mathematical modeling, and HTML.</li>
+          <li>Ran a self-directed analysis of urban accessibility across Seattle neighborhoods, processing CSV datasets on population density and infrastructure such as curb ramps.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-edu">
+    <h2 id="h-edu"><span class="sl" aria-hidden="true">/</span>education</h2>
+    <div class="stack">
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Bachelor of Computer Science <span class="org">· University of Washington, Seattle</span></h3>
+          <p class="when">Expected Jun 2029</p>
+        </div>
+        <p class="edu-meta">GPA 3.95 · Dean's List, 3 consecutive quarters</p>
+        <p class="course-label">Relevant coursework</p>
+        <ul class="specs"><li>Intermediate Data Programming</li><li>Intro to Programming III</li><li>Foundations of Computing I</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-skills">
+    <h2 id="h-skills"><span class="sl" aria-hidden="true">/</span>skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt>
+      <dd>Python, Java, SQL, HTML</dd>
+      <dt>Tools</dt>
+      <dd>ROS 2, Isaac Sim, PostgreSQL, SPSS, Microsoft Excel</dd>
+      <dt>Methods</dt>
+      <dd>Mathematical modeling, discrete optimization, differential methods, statistical analysis, data analysis and visualization, algorithm development</dd>
+    </dl>
+  </section>
+
+  <footer>
+    <span>Keyue Ouyang · keyueoy@uw.edu</span>
+    <span>Updated October 2026</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  var em = document.getElementById('email');
+  var label = 'Copy email';
+  function reset() { setTimeout(function () { btn.textContent = label; }, 1800); }
+  function selectText() {
+    try {
+      var r = document.createRange();
+      r.selectNodeContents(em);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+      btn.textContent = 'Selected';
+    } catch (e) { btn.textContent = 'Select to copy'; }
+    reset();
+  }
+  btn.addEventListener('click', function () {
+    var text = em.textContent.trim();
+    try {
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = 'Copied';
+        reset();
+      }, selectText);
+    } catch (e) { selectText(); }
+  });
+})();
+</script>
+</body>
+</html>
